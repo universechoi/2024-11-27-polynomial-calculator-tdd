@@ -35,4 +35,14 @@ public class CalculatorTest {
 
         assertThat(answer).isEqualTo(2);
     }
+
+    @Test
+    @DisplayName("ternaryTest")
+    public void ternaryTest() {
+        Calculator calculator = new Calculator();
+
+        int answer = calculator.run("5 - 3 + 2");
+
+        assertThat(answer).isEqualTo(4);
+    }
 }
