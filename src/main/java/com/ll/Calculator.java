@@ -8,19 +8,28 @@ public class Calculator {
 
         int answer = 0;
 
-        int num1 = Integer.parseInt(inputs.get(0));
-        int num2 = Integer.parseInt(inputs.get(2));
+        for (int i = 0; i < inputs.size() - 2; i += 2) {
+            int num1;
+            int num2;
+            if (i == 0) {
+                num1 = Integer.parseInt(inputs.get(i));
+            } else {
+                num1 = answer;
+            }
+            num2 = Integer.parseInt(inputs.get(i + 2));
 
-        String operator = inputs.get(1);
+            String operator = inputs.get(i + 1);
 
-        switch (operator) {
-            case ("+"):
-                answer = add(num1, num2);
-                break;
-            case ("-"):
-                answer = min(num1, num2);
-                break;
+            switch (operator) {
+                case ("+"):
+                    answer = add(num1, num2);
+                    break;
+                case ("-"):
+                    answer = min(num1, num2);
+                    break;
+            }
         }
+
         return answer;
     }
 
