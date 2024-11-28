@@ -15,4 +15,14 @@ public class CalculatorTest {
 
         assertThat(answer).isEqualTo(8);
     }
+
+    @Test
+    @DisplayName("addTest")
+    public void addTest2() {
+        Calculator calculator = new Calculator();
+
+        int answer = calculator.run("1 + 2");
+
+        assertThat(answer).isEqualTo(3);
+    }
 }
