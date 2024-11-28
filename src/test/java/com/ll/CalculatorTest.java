@@ -25,4 +25,14 @@ public class CalculatorTest {
 
         assertThat(answer).isEqualTo(3);
     }
+
+    @Test
+    @DisplayName("minusTest")
+    public void minusTest() {
+        Calculator calculator = new Calculator();
+
+        int answer = calculator.run("5 - 3");
+
+        assertThat(answer).isEqualTo(2);
+    }
 }
