@@ -45,4 +45,14 @@ public class CalculatorTest {
 
         assertThat(answer).isEqualTo(4);
     }
+
+    @Test
+    @DisplayName("multiplyTest")
+    public void multiplyTest() {
+        Calculator calculator = new Calculator();
+
+        int answer = calculator.run("2 + 3 * 2");
+
+        assertThat(answer).isEqualTo(8);
+    }
 }
